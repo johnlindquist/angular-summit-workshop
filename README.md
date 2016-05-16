@@ -260,7 +260,7 @@ http://plnkr.co/edit/2aIgMzUx7XgZe9EA6upB?p=preview
     
     ```
 
-6. Find the person by looking up the `id` in the `people` in the `detail.component.ts`
+6. Find the person by looking up the `id` in the `people` in the `detail.component.ts` inside the `routerOnActive` block in `detail.component.ts`
 
     ```TypeScript
       person;
