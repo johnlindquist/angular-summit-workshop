@@ -281,6 +281,95 @@ http://plnkr.co/edit/2aIgMzUx7XgZe9EA6upB?p=preview
     <h3>{{person.id}}</h3>
     ```
 
+---
+
+### Creating Inputs and Outputs on Components
+1. Add an `Input()` of `person` to the `card.component.ts`
+
+    ```TypeScript
+        export class CardComponent implements OnInit {
+          @Input() person;
+            
+          constructor() {}
+        
+          ngOnInit() {
+          }
+        
+        }
+    ```
+    
+2. Replace the `card.component.html` template with bindings to the `person`
+
+    ```html
+        <input type="text" [(ngModel)]="person.name">
+    ```
+3. Replace the content where you used `app-card` with an `[person]` attribute
+
+    ```html
+        <app-card
+          [person]="person"
+          *ngFor="let person of team.people"
+        >
+        </app-card>
+    ```
+    
+4. Add an `@Output()` of `edit` to the `card.component.ts`
+
+    ```TypeScript
+    export class CardComponent implements OnInit {
+      @Input() person;
+      @Output() edit = new EventEmitter();
+      constructor() {}
+    
+      ngOnInit() {
+      }
+    
+    }
+    ```
+
+5. Add an edit `button` to the `card.component.html`
+
+    ```html
+    <input type="text" [(ngModel)]="person.name">
+    <button (click)="edit.emit(person)">Edit</button>
+    ```
+
+6. Handle the edit event in the `team.component.html`
+
+
+    ```html
+    <app-card
+      [person]="person"
+      *ngFor="let person of team.people"
+      (edit)="onEdit($event)"
+    >
+    </app-card>
+    ```
+
+7. Create then `onEdit` event handler in the `team.component.ts`
+
+    ```TypeScript
+    onEdit(event){
+        console.log(event);
+      }
+    ```
+
+8. Inject the router into the `team.component.ts` constructor
+
+    ```TypeScript
+      constructor(
+        public team:TeamService,
+        public router:Router
+      ) {}
+    ```
+    
+9. Navigate using the `onEdit` handler
+
+    ```TypeScript
+    onEdit(event){
+        this.router.navigate(['/detail', event.id]);
+    }
+    ```
 
 
 
