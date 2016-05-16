@@ -281,6 +281,8 @@ http://plnkr.co/edit/2aIgMzUx7XgZe9EA6upB?p=preview
     <h2>{{person.name}}</h2>
     <h3>{{person.id}}</h3>
     ```
+    
+8 . Delete the `[routerLink]="[/detail/1]"` from your `workshop.component.html`
 
 ---
 
