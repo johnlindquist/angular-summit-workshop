@@ -43,7 +43,7 @@
     ng g r detail
     ```
     
-5. Add an `id` param to the detail path in `walkthrough.component.ts`
+5. Add an `id` param to the detail path in `workshop.component.ts`
     
     ```js
     {path: '/detail/:id', component: DetailComponent}
