@@ -277,6 +277,7 @@ http://plnkr.co/edit/2aIgMzUx7XgZe9EA6upB?p=preview
 7. Render out the `person` in `detail.component.html`
 
     ```html
+    <!-- delete the <p> tag -->
     <h2>{{person.name}}</h2>
     <h3>{{person.id}}</h3>
     ```
