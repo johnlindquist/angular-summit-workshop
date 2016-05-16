@@ -73,7 +73,7 @@ http://plnkr.co/edit/2aIgMzUx7XgZe9EA6upB?p=preview
     ng g s shared/team
     ```
 
-2. Add a `name` property to the service
+2. Add a `name` property to the service `team.service.ts`
     
     ```TypeScript
     import { Injectable } from '@angular/core';
