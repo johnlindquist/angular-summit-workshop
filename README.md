@@ -1,3 +1,6 @@
+### Install Specific Version
+`npm install -g angular-cli@1.0.0-beta.1`
+
 ### Starting Up a New Project
 1. New Project
     
