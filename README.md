@@ -1,4 +1,7 @@
-### Install Specific Version
+### Online Playground
+http://plnkr.co/edit/2aIgMzUx7XgZe9EA6upB?p=preview
+
+### Install Specific Version of Angular CLI
 `npm install -g angular-cli@1.0.0-beta.1`
 
 ### Starting Up a New Project
