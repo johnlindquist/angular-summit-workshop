@@ -132,7 +132,7 @@
 2. Import the Component and add to `team.component.ts`
     
     ```TypeScript
-    import { TeamService, Card } from '../shared';
+    import { TeamService, CardComponent } from '../shared';
     ```
 
 3. Add the `CardComponent` to the `team.component.ts` 's `directives:[]`
